@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'signin_login_app/bootstrap.min.css' %}" />
+    <meta charset="UTF-8">
+    <title>Sig up</title>
+</head>
+<body>
+<center>
+<div class="col-md-3">
+      <legend>Sign up!</legend>
+    <form accept-charset="UTF-8" action="{% url 'sigin_login_app:_signup' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-warning" type="submit">Sign up</button><br>
+    </form>
+</div>
+</center>
+</body>
+</html>
